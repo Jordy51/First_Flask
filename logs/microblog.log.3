@@ -1,0 +1,118 @@
+2018-08-10 11:56:09,550 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 11:56:16,644 ERROR: Exception on /edit_profile [GET] [in /home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/media/jordy/Science/Programs/Web/Flask/microblog/app/routes.py", line 88, in edit_profile
+    form = EditProfileForm(current_user.username)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/media/jordy/Science/Programs/Web/Flask/microblog/app/forms.py", line 40, in __init__
+    super(EditProfileForm, self).__init__(*args, **kwargs)
+NameError: name 'args' is not defined
+2018-08-10 11:58:18,419 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 11:58:25,881 ERROR: Exception on /edit_profile [POST] [in /home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/media/jordy/Science/Programs/Web/Flask/microblog/app/routes.py", line 89, in edit_profile
+    if(form.validate_on_submit()):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 206, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 226, in _run_validation_chain
+    validator(form, self)
+  File "/media/jordy/Science/Programs/Web/Flask/microblog/app/forms.py", line 45, in validate_username
+    user = User.query.filte_by(username=self.username.data).first()
+AttributeError: 'BaseQuery' object has no attribute 'filte_by'
+2018-08-10 11:58:55,607 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 11:59:14,598 ERROR: Exception on /edit_profile [POST] [in /home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/media/jordy/Science/Programs/Web/Flask/microblog/app/routes.py", line 89, in edit_profile
+    if(form.validate_on_submit()):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 206, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/wtforms/fields/core.py", line 226, in _run_validation_chain
+    validator(form, self)
+  File "/media/jordy/Science/Programs/Web/Flask/microblog/app/forms.py", line 45, in validate_username
+    user = User.query.filte_by(username=self.username.data).first()
+AttributeError: 'BaseQuery' object has no attribute 'filte_by'
+2018-08-10 12:00:32,998 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 21:18:46,144 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 21:19:09,518 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 21:46:10,215 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 21:48:30,243 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 21:59:32,973 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-10 21:59:40,102 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-12 10:17:48,364 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
+2018-08-12 10:18:06,956 ERROR: Exception on /index [GET] [in /home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/media/jordy/Science/Programs/Web/Flask/microblog/app/routes.py", line 23, in index
+    posts = current_user.followed_post().all()
+  File "/home/jordy/anaconda3/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_post'
+2018-08-12 10:19:30,340 INFO: Microblog startup [in /media/jordy/Science/Programs/Web/Flask/microblog/app/__init__.py:38]
